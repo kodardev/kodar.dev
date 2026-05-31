@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans text-body leading-relaxed;
+  }
+
+  h1 {
+    @apply text-display font-medium leading-none tracking-tight;
+  }
+
+  h2 {
+    @apply text-heading-lg font-medium leading-none;
+  }
+
+  h3 {
+    @apply text-heading-md font-medium leading-snug;
+  }
+
+  h4 {
+    @apply text-heading-sm font-medium;
+  }
+}
+
+@layer components {
+  .elevation-interactive {
+    @apply shadow-elevation-md transition-[transform,box-shadow,background-color,filter] duration-150 ease-out;
+  }
+
+  .elevation-interactive:hover:not(:disabled) {
+    @apply shadow-elevation-lg -translate-x-0.5 -translate-y-0.5;
+  }
+
+  .elevation-interactive:active:not(:disabled) {
+    @apply shadow-elevation-sm translate-x-0 translate-y-0;
+  }
+}

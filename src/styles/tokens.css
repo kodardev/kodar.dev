@@ -1,0 +1,50 @@
+/**
+ * Design tokens — single source of truth for colors, type, and spacing.
+ *
+ * Students: change a value here and watch the whole app update.
+ */
+@theme {
+  /* Brand — Positivus palette */
+  --color-accent: #b9ff66;
+  --color-accent-hover: #a8eb55;
+  --color-dark: #191a23;
+  --color-dark-hover: #2a2b36;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f3f3f3;
+  --color-ink: #000000;
+  --color-ink-muted: #4a4a4a;
+  --color-border: #000000;
+
+  /* Typography — Space Grotesk (loaded in index.css) */
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+
+  --text-display: 3.75rem; /* 60px — h1 */
+  --text-heading-lg: 2.5rem; /* 40px — h2 / section labels */
+  --text-heading-md: 1.875rem; /* 30px — h3 */
+  --text-heading-sm: 1.25rem; /* 20px — h4 */
+  --text-body: 1.125rem; /* 18px — p */
+  --text-body-sm: 0.9375rem; /* 15px — UI hints */
+
+  /* Radii — Positivus uses generous rounding on cards */
+  --radius-label: 0.4375rem; /* 7px — green highlight chips */
+  --radius-button: 0.875rem; /* 14px — buttons & inputs */
+  --radius-card: 2.8125rem; /* 45px — large cards & sections */
+
+  /* Spacing rhythm — blocks.cloud-style generous sections */
+  --spacing-section: 5rem;
+  --spacing-block: 2.5rem;
+  --spacing-inline: 1.5rem;
+
+  /* Layout */
+  --container-max: 80rem; /* 1280px */
+  --container-padding: clamp(1.25rem, 4vw, 6.25rem);
+
+  /*
+   * Elevation — blocks.cloud-style hard offset shadows (no blur).
+   * Rest → hover lifts; active shrinks shadow for a tactile press.
+   */
+  --shadow-elevation-sm: 2px 2px 0 var(--color-border);
+  --shadow-elevation-md: 4px 4px 0 var(--color-border);
+  --shadow-elevation-lg: 6px 6px 0 var(--color-border);
+  --shadow-elevation-xl: 8px 8px 0 var(--color-border);
+}
