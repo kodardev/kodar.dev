@@ -6,8 +6,8 @@ import {
   buttonVariantStyles,
   cardBaseStyles,
 } from "@/components/ui";
+import raisingHand from "@/assets/illustrations/raising-hand.svg";
 import { Container } from "@/components/layout/Container";
-import { Logo } from "@/components/layout/Logo";
 import { cn } from "@/lib/cn";
 
 export function HomePage() {
@@ -17,9 +17,8 @@ export function HomePage() {
         <Container>
           <div className="grid items-center gap-block lg:grid-cols-2">
             <div className="space-y-6">
-              <SectionLabel>Learn by building</SectionLabel>
               <h1 className="max-w-xl">
-                Understand the app you use — one file at a time
+                Construa um futuro mais proximo
               </h1>
               <p className="max-w-lg text-body text-ink-muted">
                 This project is structured for education: design tokens, UI components,
@@ -51,10 +50,10 @@ export function HomePage() {
             </div>
 
             <div
-              className="relative flex aspect-[4/3] items-center justify-center rounded-card border border-border bg-surface-muted p-8"
+              className="relative flex aspect-[4/3] items-center justify-center"
               aria-hidden
             >
-              <Logo showWordmark={false} size="lg" className="opacity-90" />
+              <img className="size-full" src={raisingHand} />
             </div>
           </div>
         </Container>
