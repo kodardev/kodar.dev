@@ -5,16 +5,17 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   hint?: string;
   error?: string;
+  labelClassName?: string;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, label, hint, error, id, ...props }, ref) => {
+  ({ className, label, hint, error, id, labelClassName, ...props }, ref) => {
     const inputId = id ?? (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
 
     return (
-      <div className="flex w-full flex-col gap-2">
+      <div className="flex w-full flex-col gap-[5px]">
         {label ? (
-          <label htmlFor={inputId} className="text-body-sm font-medium text-ink">
+          <label htmlFor={inputId} className={cn("text-body-sm font-medium text-ink", labelClassName)}>
             {label}
           </label>
         ) : null}

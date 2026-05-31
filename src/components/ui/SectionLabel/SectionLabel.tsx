@@ -10,7 +10,7 @@ export function SectionLabel({ children, className }: SectionLabelProps) {
   return (
     <span
       className={cn(
-        "inline-block rounded-label bg-accent px-2 py-0.5 text-heading-lg font-medium text-ink",
+        "w-fit shrink-0 whitespace-nowrap rounded-label bg-accent px-[7px] py-0.5 text-heading-lg font-medium leading-none text-ink",
         className,
       )}
     >

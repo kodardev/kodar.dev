@@ -16,6 +16,8 @@
   --color-ink: var(--color-black);
   --color-ink-muted: var(--color-dusty-olive);
   --color-border: var(--color-black);
+  --color-primary: var(--color-black);
+  --color-primary-hover: var(--color-dusty-olive);
   --color-dark: var(--color-black);
   --color-dark-hover: var(--color-dusty-olive);
   --color-surface: #ffffff;
@@ -44,9 +46,9 @@
   --spacing-block: 2.5rem;
   --spacing-inline: 1.5rem;
 
-  /* Layout */
-  --container-max: 80rem; /* 1280px */
-  --container-padding: clamp(1.25rem, 4vw, 6.25rem);
+  /* Layout — Positivus frame: 1440px with 100px side padding */
+  --layout-max: 90rem; /* 1440px — not --container-max (conflicts with Tailwind w-max) */
+  --layout-gutter: clamp(1.25rem, 6.94vw, 6.25rem); /* 100px at 1440 */
 
   /*
    * Elevation — blocks.cloud-style hard offset shadows (no blur).

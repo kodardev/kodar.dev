@@ -40,4 +40,23 @@
   .elevation-interactive:active:not(:disabled) {
     @apply shadow-elevation-sm translate-x-0 translate-y-0;
   }
+
+  /* Positivus landing — card drop shadow from Figma (0 5px 0) */
+  .landing-card-shadow {
+    box-shadow: 0 5px 0 0 var(--color-border);
+  }
+
+  .landing-card-label {
+    @apply w-fit shrink-0 rounded-label px-[7px] py-0.5 text-heading-md font-medium leading-none text-ink;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .landing-card-label--accent {
+    @apply bg-accent;
+  }
+
+  .landing-card-label--surface {
+    @apply bg-surface;
+  }
 }

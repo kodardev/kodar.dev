@@ -1,34 +1,41 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
-import { cn } from "@/lib/cn";
 
-const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  cn(
-    "text-body-sm font-medium transition-colors hover:text-dark",
-    isActive ? "text-dark underline underline-offset-4" : "text-ink-muted",
-  );
+const navLinks = [
+  { to: "#about", label: "About us" },
+  { to: "#services", label: "Services" },
+  { to: "#case-studies", label: "Use Cases" },
+  { to: "#pricing", label: "Pricing" },
+  { to: "#blog", label: "Blog" },
+] as const;
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/10 bg-surface/90 backdrop-blur-md">
-      <Container className="flex h-16 items-center justify-between gap-6">
-        <NavLink to="/" className="text-ink h-fit h-16 flex items-center">
+    <header className="bg-surface">
+      <Container className="flex items-center justify-between gap-6 py-[30px] xl:my-[60px] xl:py-0">
+        <Link to="/" className="text-ink">
           <Logo />
-        </NavLink>
+        </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
-          <NavLink to="/" className={navLinkClass}>
-            Home
-          </NavLink>
-          <NavLink to="/style-guide" className={navLinkClass}>
-            Style guide
-          </NavLink>
+        <nav className="hidden items-center gap-10 xl:flex" aria-label="Main">
+          {navLinks.map(({ to, label }) => (
+            <a
+              key={label}
+              href={to}
+              className="text-heading-sm font-normal leading-7 text-ink hover:text-primary"
+            >
+              {label}
+            </a>
+          ))}
+          <Button variant="secondary" size="lg" className="px-[35px] py-5">
+            Request a quote
+          </Button>
         </nav>
 
-        <Button variant="secondary" size="md" className="hidden sm:inline-flex">
-          Explore code
+        <Button variant="secondary" size="md" className="xl:hidden">
+          Request a quote
         </Button>
       </Container>
     </header>
