@@ -6,7 +6,7 @@ Each subfolder is one **primitive** with a single responsibility.
 |--------|---------|
 | `Button/` | Actions — primary, secondary, accent with 3D elevation |
 | `Badge/` | Small labels on cards |
-| `Card/` | Elevated surfaces (white / green / dark) with hard offset shadow |
+| `Card/` | Elevated surfaces (white / celadon / black) with hard offset shadow |
 | `Input/` | Form fields with label & hint |
 | `SectionLabel/` | Green highlight chip for section titles |
 

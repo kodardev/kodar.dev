@@ -13,7 +13,7 @@ export const cardBaseStyles =
 const variantStyles: Record<CardVariant, string> = {
   default: "bg-surface text-ink",
   accent: "bg-accent text-ink",
-  dark: "bg-dark text-surface",
+  dark: "bg-dark text-on-dark",
   muted: "bg-surface-muted text-ink",
 };
 

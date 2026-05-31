@@ -5,7 +5,7 @@ export interface SectionLabelProps {
   className?: string;
 }
 
-/** Green highlight chip used for section titles in the Positivus design. */
+/** Highlight chip used for section titles — Celadon background from the Kodar palette. */
 export function SectionLabel({ children, className }: SectionLabelProps) {
   return (
     <span

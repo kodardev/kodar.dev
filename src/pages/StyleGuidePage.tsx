@@ -2,7 +2,15 @@ import { Badge, Button, Card, Input, SectionLabel } from "@/components/ui";
 import { Container } from "@/components/layout/Container";
 import { StyleGuideSection } from "@/components/learn/StyleGuideSection";
 
-const swatches = [
+const brandSwatches = [
+  { name: "Black", hex: "#040403", className: "bg-black" },
+  { name: "Dusty Olive", hex: "#5b7553", className: "bg-dusty-olive" },
+  { name: "Muted Teal", hex: "#8eb897", className: "bg-muted-teal" },
+  { name: "Tea Green", hex: "#c3e8bd", className: "bg-tea-green" },
+  { name: "Celadon", hex: "#9ddbad", className: "bg-celadon" },
+] as const;
+
+const semanticSwatches = [
   { name: "Accent", token: "--color-accent", className: "bg-accent" },
   { name: "Dark", token: "--color-dark", className: "bg-dark" },
   { name: "Surface muted", token: "--color-surface-muted", className: "bg-surface-muted" },
@@ -17,9 +25,8 @@ export function StyleGuidePage() {
           <SectionLabel>Style guide</SectionLabel>
           <h1>Design system v0.1</h1>
           <p className="text-body text-ink-muted">
-            Tokens and components based on the Positivus Figma community file, with
-            blocks.cloud-inspired 3D elevation — hard offset shadows, hover lift, and
-            press feedback on interactive controls.
+            Kodar brand palette — five greens anchored on black — with blocks.cloud-inspired
+            3D elevation, hover lift, and press feedback on interactive controls.
           </p>
           <nav className="flex flex-wrap gap-3 text-body-sm">
             {[
@@ -44,19 +51,38 @@ export function StyleGuidePage() {
         <StyleGuideSection
           id="colors"
           title="Color palette"
-          description="Semantic colors live in tokens.css and map to Tailwind utilities like bg-accent and text-dark."
+          description="Five brand colors in tokens.css, mapped to semantic utilities like bg-accent, text-ink, and text-on-dark."
           learnFile="src/styles/tokens.css"
         >
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {swatches.map((swatch) => (
-              <div key={swatch.name} className="space-y-2">
-                <div
-                  className={`h-24 rounded-button border border-border ${swatch.className}`}
-                />
-                <p className="font-medium">{swatch.name}</p>
-                <p className="font-mono text-body-sm text-ink-muted">{swatch.token}</p>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-heading-sm">Brand</h3>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                {brandSwatches.map((swatch) => (
+                  <div key={swatch.name} className="space-y-2">
+                    <div
+                      className={`h-24 rounded-button border border-border ${swatch.className}`}
+                    />
+                    <p className="font-medium">{swatch.name}</p>
+                    <p className="font-mono text-body-sm text-ink-muted">{swatch.hex}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div>
+              <h3 className="text-heading-sm">Semantic</h3>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {semanticSwatches.map((swatch) => (
+                  <div key={swatch.name} className="space-y-2">
+                    <div
+                      className={`h-24 rounded-button border border-border ${swatch.className}`}
+                    />
+                    <p className="font-medium">{swatch.name}</p>
+                    <p className="font-mono text-body-sm text-ink-muted">{swatch.token}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </StyleGuideSection>
 
@@ -94,7 +120,7 @@ export function StyleGuidePage() {
         <StyleGuideSection
           id="typography"
           title="Typography"
-          description="Space Grotesk at display, heading, and body scales — matching Positivus h1–p styles."
+          description="Space Grotesk at display, heading, and body scales for headings and body copy."
           learnFile="src/index.css"
         >
           <div className="space-y-6">
@@ -119,7 +145,7 @@ export function StyleGuidePage() {
         <StyleGuideSection
           id="buttons"
           title="Buttons"
-          description="Positivus color variants with blocks.cloud 3D elevation: 2px border, 4px hard shadow at rest, lift to 6px on hover, compress to 2px on press."
+          description="Brand color variants with blocks.cloud 3D elevation: 2px border, 4px hard shadow at rest, lift to 6px on hover, compress to 2px on press."
           learnFile="src/components/ui/Button/Button.tsx"
         >
           <div className="flex flex-wrap gap-6">
@@ -140,7 +166,7 @@ export function StyleGuidePage() {
         <StyleGuideSection
           id="cards"
           title="Cards"
-          description="Service tiles with Positivus surfaces and blocks.cloud-style elevation — 2px border plus a 4px hard offset shadow."
+          description="Service tiles with brand surfaces and blocks.cloud-style elevation — 2px border plus a 4px hard offset shadow."
           learnFile="src/components/ui/Card/Card.tsx"
         >
           <div className="grid gap-8 md:grid-cols-3">
@@ -159,15 +185,15 @@ export function StyleGuidePage() {
               </Badge>
               <h4 className="text-heading-sm">Pay-per-click advertising</h4>
               <p className="mt-2 text-body-sm text-ink-muted">
-                Green card — accent variant.
+                Celadon card — accent variant.
               </p>
             </Card>
             <Card variant="dark">
               <Badge variant="accent" className="mb-3">
                 SMM
               </Badge>
-              <h4 className="text-heading-sm text-surface">Social media marketing</h4>
-              <p className="mt-2 text-body-sm text-surface/80">
+              <h4 className="text-heading-sm text-on-dark">Social media marketing</h4>
+              <p className="mt-2 text-body-sm text-on-dark/80">
                 Dark card — dark variant.
               </p>
             </Card>

@@ -14,7 +14,7 @@ export const buttonBaseStyles =
 
 export const buttonVariantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-dark text-surface hover:bg-dark-hover focus-visible:ring-dark",
+    "bg-dark text-on-dark hover:bg-dark-hover focus-visible:ring-dark",
   secondary:
     "bg-surface text-ink hover:bg-surface-muted focus-visible:ring-ink",
   accent:
@@ -27,7 +27,7 @@ export const buttonSizeStyles: Record<ButtonSize, string> = {
 };
 
 /**
- * Button — Positivus colors with blocks.cloud-style 3D elevation (hard offset shadow + press).
+ * Button — Kodar brand colors with blocks.cloud-style 3D elevation (hard offset shadow + press).
  * Open this file to see how variants map to Tailwind classes.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

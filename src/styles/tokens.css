@@ -1,19 +1,28 @@
 /**
  * Design tokens — single source of truth for colors, type, and spacing.
  *
+ * Brand palette: Black, Dusty Olive, Muted Teal, Tea Green, Celadon.
  * Students: change a value here and watch the whole app update.
  */
 @theme {
-  /* Brand — Positivus palette */
-  --color-accent: #b9ff66;
-  --color-accent-hover: #a8eb55;
-  --color-dark: #191a23;
-  --color-dark-hover: #2a2b36;
+  /* Brand palette */
+  --color-black: #040403;
+  --color-dusty-olive: #5b7553;
+  --color-muted-teal: #8eb897;
+  --color-tea-green: #c3e8bd;
+  --color-celadon: #9ddbad;
+
+  /* Semantic — mapped from brand colors */
+  --color-ink: var(--color-black);
+  --color-ink-muted: var(--color-dusty-olive);
+  --color-border: var(--color-black);
+  --color-dark: var(--color-black);
+  --color-dark-hover: var(--color-dusty-olive);
   --color-surface: #ffffff;
-  --color-surface-muted: #f3f3f3;
-  --color-ink: #000000;
-  --color-ink-muted: #4a4a4a;
-  --color-border: #000000;
+  --color-surface-muted: var(--color-tea-green);
+  --color-accent: var(--color-celadon);
+  --color-accent-hover: var(--color-muted-teal);
+  --color-on-dark: var(--color-tea-green);
 
   /* Typography — Space Grotesk (loaded in index.css) */
   --font-sans: "Space Grotesk", system-ui, sans-serif;
@@ -25,8 +34,8 @@
   --text-body: 1.125rem; /* 18px — p */
   --text-body-sm: 0.9375rem; /* 15px — UI hints */
 
-  /* Radii — Positivus uses generous rounding on cards */
-  --radius-label: 0.4375rem; /* 7px — green highlight chips */
+  /* Radii */
+  --radius-label: 0.4375rem; /* 7px — highlight chips */
   --radius-button: 0.875rem; /* 14px — buttons & inputs */
   --radius-card: 2.8125rem; /* 45px — large cards & sections */
 

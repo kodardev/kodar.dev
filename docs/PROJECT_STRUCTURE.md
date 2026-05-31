@@ -10,7 +10,7 @@ src/
 ├── pages/            # Full screens (Home, Style Guide)
 ├── components/
 │   ├── ui/           # Design system primitives (Button, Card, …)
-│   ├── layout/       # Page chrome (header, container)
+│   ├── layout/       # Page chrome (header, footer, logo, container)
 │   └── learn/        # Teaching helpers (file path callouts)
 ├── styles/
 │   └── tokens.css    # Design tokens → Tailwind theme
@@ -28,8 +28,8 @@ src/
 
 ## Design references
 
-- [Positivus (Figma)](https://www.figma.com/design/nReuPBlPBFer26cV52SINr/) — colors, typography, cards, section labels.
-- [blocks.cloud](https://blocks.cloud/) — generous section spacing and clear hierarchy.
+- **Kodar brand palette** — see `src/styles/tokens.css` (Black, Dusty Olive, Muted Teal, Tea Green, Celadon).
+- [blocks.cloud](https://blocks.cloud/) — generous section spacing, 3D elevation, and clear hierarchy.
 
 ## Commands
 

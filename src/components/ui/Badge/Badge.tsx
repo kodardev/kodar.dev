@@ -9,7 +9,7 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 
 const variantStyles: Record<BadgeVariant, string> = {
   accent: "bg-accent text-ink",
-  dark: "bg-dark text-surface",
+  dark: "bg-dark text-on-dark",
   outline: "bg-transparent text-ink border border-border",
 };
 

@@ -7,6 +7,7 @@ import {
   cardBaseStyles,
 } from "@/components/ui";
 import { Container } from "@/components/layout/Container";
+import { Logo } from "@/components/layout/Logo";
 import { cn } from "@/lib/cn";
 
 export function HomePage() {
@@ -22,8 +23,8 @@ export function HomePage() {
               </h1>
               <p className="max-w-lg text-body text-ink-muted">
                 This project is structured for education: design tokens, UI components,
-                and pages are organized so you can trace every pixel back to code. Design
-                inspired by Positivus; layout rhythm influenced by blocks.cloud.
+                and pages are organized so you can trace every pixel back to code. Built on
+                the Kodar green palette with blocks.cloud-style elevation.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -53,11 +54,7 @@ export function HomePage() {
               className="relative flex aspect-[4/3] items-center justify-center rounded-card border border-border bg-surface-muted p-8"
               aria-hidden
             >
-              <div className="absolute inset-8 rounded-card border-2 border-dashed border-accent/60" />
-              <p className="relative z-10 max-w-xs text-center text-body-sm text-ink-muted">
-                Hero illustration placeholder — students will replace this when building
-                the landing page.
-              </p>
+              <Logo showWordmark={false} size="lg" className="opacity-90" />
             </div>
           </div>
         </Container>
