@@ -11,7 +11,10 @@ export function CaseStudiesSection() {
           title="Case Studies"
           description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
         />
-        <div className="rounded-card bg-primary px-10 py-[70px] md:px-[60px]">
+        <div
+          className="surface-dark rounded-card bg-primary px-10 py-[70px] md:px-[60px]"
+          data-surface="dark"
+        >
           <div className="grid gap-10 md:grid-cols-3 md:gap-0">
             {caseStudies.map((study, index) => (
               <div

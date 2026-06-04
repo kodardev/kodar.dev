@@ -17,9 +17,9 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("flex flex-col gap-[30px] lg:flex-row lg:items-center lg:gap-10", className)}>
+    <div className={cn("flex flex-col gap-4 lg:items-center lg:gap-10", className)}>
       <SectionLabel className="flex-none">{title}</SectionLabel>
-      <p className={cn("min-w-0 flex-1 text-body text-ink lg:max-w-[580px]", descriptionClassName)}>
+      <p className={cn("min-w-0 flex-1 text-body text-ink lg:max-w-[680px]", descriptionClassName)}>
         {description}
       </p>
     </div>

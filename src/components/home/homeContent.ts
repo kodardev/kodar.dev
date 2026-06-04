@@ -9,50 +9,6 @@ export const partnerLogos = [
   { name: "Zoom", src: "/assets/home/logo-zoom.svg" },
 ] as const;
 
-export const services = [
-  {
-    title: ["Search engine", "optimization"],
-    labelTone: "accent" as const,
-    variant: "muted" as const,
-    illustration: "/assets/home/service-seo.png",
-    darkLink: false,
-  },
-  {
-    title: ["Pay-per-click", "advertising"],
-    labelTone: "surface" as const,
-    variant: "accent" as const,
-    illustration: "/assets/home/service-ppc.png",
-    darkLink: false,
-  },
-  {
-    title: ["Social Media", "Marketing"],
-    labelTone: "surface" as const,
-    variant: "dark" as const,
-    illustration: "/assets/home/service-smm.png",
-    darkLink: true,
-  },
-  {
-    title: ["Email", "Marketing"],
-    labelTone: "accent" as const,
-    variant: "muted" as const,
-    illustration: "/assets/home/service-email.png",
-    darkLink: false,
-  },
-  {
-    title: ["Content", "Creation"],
-    labelTone: "surface" as const,
-    variant: "accent" as const,
-    illustration: "/assets/home/service-content.png",
-    darkLink: false,
-  },
-  {
-    title: ["Analytics and", "Tracking"],
-    labelTone: "accent" as const,
-    variant: "dark" as const,
-    illustration: "/assets/home/service-analytics.png",
-    darkLink: true,
-  },
-] as const;
 
 export const caseStudies = [
   {

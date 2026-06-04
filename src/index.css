@@ -59,4 +59,9 @@
   .landing-card-label--surface {
     @apply bg-surface;
   }
+
+  /** Mark dark panels so primary buttons invert (see Button primary + tokens.css). */
+  .surface-dark {
+    @apply group/surface;
+  }
 }

@@ -11,7 +11,10 @@ export function TestimonialsSection() {
           description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
           descriptionClassName="lg:max-w-[473px]"
         />
-        <div className="overflow-hidden rounded-card bg-primary px-6 py-16 md:px-12 md:py-[84px]">
+        <div
+          className="surface-dark overflow-hidden rounded-card bg-primary px-6 py-16 md:px-12 md:py-[84px]"
+          data-surface="dark"
+        >
           <div className="mx-auto max-w-[606px]">
             <div className="relative min-h-[266px] w-full">
               <img

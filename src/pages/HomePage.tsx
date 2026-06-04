@@ -14,7 +14,7 @@ export function HomePage() {
   return (
     <div className="overflow-x-hidden pb-0">
       <HeroSection />
-      <PartnerLogosSection />
+      {/* <PartnerLogosSection /> */}
       <ServicesSection />
       <CtaSection />
       <CaseStudiesSection />

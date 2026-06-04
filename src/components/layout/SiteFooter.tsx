@@ -8,7 +8,10 @@ export function SiteFooter() {
   return (
     <footer className="mt-[70px] bg-surface pt-10">
       <Container>
-        <div className="rounded-t-card bg-primary px-8 pb-[50px] pt-[55px] text-on-dark md:px-[60px]">
+        <div
+          className="surface-dark rounded-t-card bg-primary px-8 pb-[50px] pt-[55px] text-on-dark md:px-[60px]"
+          data-surface="dark"
+        >
           <div className="flex flex-col gap-[66px]">
             <div className="flex flex-col gap-10 xl:flex-row xl:items-center xl:justify-between">
               <Logo className="text-on-dark" />
