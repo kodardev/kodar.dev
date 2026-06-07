@@ -30,7 +30,9 @@
 
 @layer components {
   .elevation-interactive {
-    @apply shadow-elevation-md transition-[transform,box-shadow,background-color,filter] duration-150 ease-out;
+    @apply shadow-elevation-md duration-150 ease-out;
+    transition-property: transform, box-shadow, background-color, filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .elevation-interactive:hover:not(:disabled) {
@@ -47,7 +49,7 @@
   }
 
   .landing-card-label {
-    @apply w-fit shrink-0 rounded-label px-[7px] py-0.5 text-heading-md font-medium leading-none text-ink;
+    @apply w-fit shrink-0 rounded-label px-1.75 py-0.5 text-heading-md font-medium leading-none text-ink;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
@@ -60,8 +62,20 @@
     @apply bg-surface;
   }
 
-  /** Mark dark panels so primary buttons invert (see Button primary + tokens.css). */
-  .surface-dark {
-    @apply group/surface;
+  /*
+   * Dark panels — primary buttons (bg-dark) invert to tea green + ink text.
+   * Mark wrappers with class "surface-dark" and data-surface="dark".
+   */
+  .surface-dark[data-surface="dark"] .elevation-interactive.bg-dark {
+    background-color: var(--color-tea-green);
+    color: var(--color-black);
+  }
+
+  .surface-dark[data-surface="dark"] .elevation-interactive.bg-dark:hover:not(:disabled) {
+    background-color: var(--color-celadon);
+  }
+
+  .surface-dark[data-surface="dark"] .elevation-interactive.bg-dark:focus-visible {
+    --tw-ring-color: var(--color-tea-green);
   }
 }

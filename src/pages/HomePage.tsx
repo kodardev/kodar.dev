@@ -3,7 +3,6 @@ import {
   ContactSection,
   CtaSection,
   HeroSection,
-  PartnerLogosSection,
   ProcessSection,
   ServicesSection,
   TeamSection,

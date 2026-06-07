@@ -8,7 +8,7 @@ const cardSurfaces = {
   dark: "bg-accent text-primary",
 } as const;
 
-export const services = [
+const services = [
   {
     title: ["Evasão Escolar"],
     description:
@@ -61,8 +61,8 @@ export const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="scroll-mt-24 pt-[70px]">
-      <Container className="space-y-[80px]">
+    <section id="services" className="scroll-mt-24 pt-17.5">
+      <Container className="space-y-section">
         <SectionHeading
           title="O Desafio que Precisamos Enfrentar"
           description="Milhões de jovens brasileiros possuem talento e potencial, mas enfrentam barreiras que limitam seu acesso à educação, tecnologia e oportunidades profissionais."
@@ -74,7 +74,7 @@ export function ServicesSection() {
                 <article
                   key={service.title.join("-")}
                   className={cn(
-                    "landing-card-shadow flex min-h-[310px] flex-col justify-between gap-8 rounded-card border border-border p-[50px] sm:flex-row sm:items-start",
+                    "landing-card-shadow flex min-h-80 flex-col justify-between gap-8 rounded-card border border-border p-12.5 sm:flex-row sm:items-start",
                     cardSurfaces[service.variant],
                   )}
                 >
@@ -85,7 +85,7 @@ export function ServicesSection() {
                   <img
                     src={service.illustration}
                     alt=""
-                    className="mx-auto h-full w-[120px] shrink-0 object-contain sm:mx-0"
+                    className="mx-auto h-full w-30 shrink-0 object-contain sm:mx-0"
                   />
                 </article>
               ))}

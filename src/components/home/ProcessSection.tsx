@@ -1,57 +1,69 @@
-import { useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { cn } from "@/lib/cn";
-import { processSteps } from "./homeContent";
 import { SectionHeading } from "./shared";
 
-export function ProcessSection() {
-  const [openIndex, setOpenIndex] = useState(0);
+const processSteps = [
+  {
+    title: "Consultation",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    title: "Research and Strategy Development",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    title: "Implementation",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    title: "Monitoring and Optimization",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    title: "Reporting and Communication",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+  {
+    title: "Continual Improvement",
+    body: "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+  },
+] as const;
 
+export function ProcessSection() {
   return (
-    <section id="process" className="scroll-mt-24 pt-[70px]">
-      <Container className="space-y-[80px]">
-        <SectionHeading
-          title="Our Working Process"
-          description="Step-by-Step Guide to Achieving Your Business Goals"
-          descriptionClassName="lg:max-w-[292px]"
-        />
+    <section id="process" className="scroll-mt-24 pt-17.5">
+      <Container className="space-y-section">
+        <SectionHeading title="Como Funcina" description="10 passos para se tornar um guerreiro" />
         <div className="flex flex-col gap-5">
           {processSteps.map((step, index) => {
-            const isOpen = openIndex === index;
+            const stepNumber = index + 1;
             return (
               <article
-                key={step.number}
+                key={step.title}
                 className={cn(
-                  "landing-card-shadow overflow-hidden rounded-card border border-border px-10 py-[41px] md:px-[60px]",
-                  isOpen ? "bg-accent" : "bg-surface-muted",
+                  "landing-card-shadow overflow-hidden rounded-card border border-border px-10 py-10 md:px-15",
+                  "bg-surface-muted",
                 )}
               >
                 <button
                   type="button"
                   className="flex w-full items-center justify-between gap-6 text-left"
-                  onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  aria-expanded={isOpen}
                 >
-                  <span className="flex items-center gap-[25px]">
-                    <span className="text-display font-medium leading-none">{step.number}</span>
+                  <span className="flex items-center gap-6">
+                    <span className="text-display font-medium leading-none">{stepNumber}</span>
                     <span className="text-heading-md font-medium">{step.title}</span>
                   </span>
-                  <span className="relative size-[58px] shrink-0">
-                    <img src="/assets/home/icon-plus.svg" alt="" className="size-full" aria-hidden />
+                  <span className="relative size-15 shrink-0">
                     <img
-                      src={isOpen ? "/assets/home/icon-minus-sign.svg" : "/assets/home/icon-plus-sign.svg"}
+                      src="/assets/home/icon-plus.svg"
                       alt=""
-                      className="absolute inset-[27%]"
+                      className="size-full"
                       aria-hidden
                     />
                   </span>
                 </button>
-                {isOpen && step.body ? (
-                  <>
-                    <hr className="my-[30px] border-border" />
-                    <p className="max-w-[1114px] text-body text-ink">{step.body}</p>
-                  </>
-                ) : null}
+                <hr className="my-7.5 border-border" />
+                <p className="max-w-278.5 text-body text-ink">{step.body}</p>
               </article>
             );
           })}

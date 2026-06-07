@@ -1,6 +1,1 @@
-export {
-  Card,
-  cardBaseStyles,
-  type CardProps,
-  type CardVariant,
-} from "./Card";
+export { Card, cardBaseStyles, type CardProps, type CardVariant } from "./Card";

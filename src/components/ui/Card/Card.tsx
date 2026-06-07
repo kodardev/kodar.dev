@@ -7,8 +7,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   variant?: CardVariant;
 }
 
-export const cardBaseStyles =
-  "rounded-card border-2 border-border p-8 shadow-elevation-md";
+export const cardBaseStyles = "rounded-card border-2 border-border p-8 shadow-elevation-md";
 
 const variantStyles: Record<CardVariant, string> = {
   default: "bg-surface text-ink",
@@ -18,17 +17,9 @@ const variantStyles: Record<CardVariant, string> = {
 };
 
 /** Card shell — bordered surface with blocks.cloud-style hard offset elevation. */
-export function Card({
-  variant = "default",
-  className,
-  children,
-  ...props
-}: CardProps) {
+export function Card({ variant = "default", className, children, ...props }: CardProps) {
   return (
-    <div
-      className={cn(cardBaseStyles, variantStyles[variant], className)}
-      {...props}
-    >
+    <div className={cn(cardBaseStyles, variantStyles[variant], className)} {...props}>
       {children}
     </div>
   );

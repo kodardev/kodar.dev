@@ -19,7 +19,7 @@ export function SectionHeading({
   return (
     <div className={cn("flex flex-col gap-4 lg:items-center lg:gap-10", className)}>
       <SectionLabel className="flex-none">{title}</SectionLabel>
-      <p className={cn("min-w-0 flex-1 text-body text-ink lg:max-w-[680px]", descriptionClassName)}>
+      <p className={cn("min-w-0 flex-1 text-body text-ink lg:max-w-2xl", descriptionClassName)}>
         {description}
       </p>
     </div>
@@ -56,14 +56,18 @@ export interface LearnMoreLinkProps {
 
 export function LearnMoreLink({ dark = false, className }: LearnMoreLinkProps) {
   return (
-    <span className={cn("inline-flex items-center gap-[15px]", className)}>
+    <span className={cn("inline-flex items-center gap-4", className)}>
       <img
-        src={dark ? "/assets/home/icon-learn-more-light.svg" : "/assets/home/icon-learn-more-dark.svg"}
+        src={
+          dark ? "/assets/home/icon-learn-more-light.svg" : "/assets/home/icon-learn-more-dark.svg"
+        }
         alt=""
         aria-hidden
-        className="size-[41px] shrink-0"
+        className="size-10 shrink-0"
       />
-      <span className={cn("text-heading-sm font-normal leading-7", dark ? "text-on-dark" : "text-ink")}>
+      <span
+        className={cn("text-heading-sm font-normal leading-7", dark ? "text-on-dark" : "text-ink")}
+      >
         Learn more
       </span>
     </span>
@@ -72,9 +76,9 @@ export function LearnMoreLink({ dark = false, className }: LearnMoreLinkProps) {
 
 export function AccentArrowLink({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-[15px]">
+    <span className="inline-flex items-center gap-4">
       <span className="text-heading-sm text-accent">{children}</span>
-      <img src="/assets/home/icon-arrow-accent.svg" alt="" aria-hidden className="h-2.5 w-[17px]" />
+      <img src="/assets/home/icon-arrow-accent.svg" alt="" aria-hidden className="h-2.5 w-4" />
     </span>
   );
 }

@@ -17,11 +17,7 @@ const markSizes: Record<LogoSize, string> = {
 };
 
 /** Kodar brand mark — used in header, footer, and marketing surfaces. */
-export function Logo({
-  showWordmark = true,
-  size = "md",
-  className,
-}: LogoProps) {
+export function Logo({ showWordmark = true, size = "md", className }: LogoProps) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
       <img
@@ -30,9 +26,7 @@ export function Logo({
         aria-hidden={showWordmark}
         className={cn("shrink-0", markSizes[size])}
       />
-      {showWordmark ? (
-        <span className="text-heading-sm font-medium">Kodar</span>
-      ) : null}
+      {showWordmark ? <span className="text-heading-sm font-medium">Kodar</span> : null}
     </span>
   );
 }

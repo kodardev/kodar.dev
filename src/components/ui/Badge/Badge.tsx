@@ -13,12 +13,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   outline: "bg-transparent text-ink border border-border",
 };
 
-export function Badge({
-  variant = "accent",
-  className,
-  children,
-  ...props
-}: BadgeProps) {
+export function Badge({ variant = "accent", className, children, ...props }: BadgeProps) {
   return (
     <span
       className={cn(

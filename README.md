@@ -17,14 +17,14 @@ Open [http://localhost:5173](http://localhost:5173) → **Style guide** for the 
 
 ## Where to look first
 
-| Goal | File |
-|------|------|
-| Brand logo | `src/components/layout/Logo.tsx` · `src/assets/kodar.svg` |
-| Colors & type scale | `src/styles/tokens.css` |
-| Buttons, cards, inputs | `src/components/ui/` |
-| Live component gallery | `src/pages/StyleGuidePage.tsx` |
-| Routes | `src/app/routes.tsx` |
-| Full folder map | `docs/PROJECT_STRUCTURE.md` |
+| Goal                   | File                                                      |
+| ---------------------- | --------------------------------------------------------- |
+| Brand logo             | `src/components/layout/Logo.tsx` · `src/assets/kodar.svg` |
+| Colors & type scale    | `src/styles/tokens.css`                                   |
+| Buttons, cards, inputs | `src/components/ui/`                                      |
+| Live component gallery | `src/pages/StyleGuidePage.tsx`                            |
+| Routes                 | `src/app/routes.tsx`                                      |
+| Full folder map        | `docs/PROJECT_STRUCTURE.md`                               |
 
 ## Scripts
 

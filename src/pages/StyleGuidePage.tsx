@@ -25,8 +25,8 @@ export function StyleGuidePage() {
           <SectionLabel>Style guide</SectionLabel>
           <h1>Design system v0.1</h1>
           <p className="text-body text-ink-muted">
-            Kodar brand palette — five greens anchored on black — with blocks.cloud-inspired
-            3D elevation, hover lift, and press feedback on interactive controls.
+            Kodar brand palette — five greens anchored on black — with blocks.cloud-inspired 3D
+            elevation, hover lift, and press feedback on interactive controls.
           </p>
           <nav className="flex flex-wrap gap-3 text-body-sm">
             {[
@@ -111,9 +111,9 @@ export function StyleGuidePage() {
             ))}
           </div>
           <p className="mt-6 max-w-prose text-body-sm text-ink-muted">
-            Cards use <code className="font-mono">shadow-elevation-md</code> at rest.
-            Buttons add the <code className="font-mono">elevation-interactive</code> class
-            for hover lift and active press — try clicking the samples below.
+            Cards use <code className="font-mono">shadow-elevation-md</code> at rest. Buttons add
+            the <code className="font-mono">elevation-interactive</code> class for hover lift and
+            active press — try clicking the samples below.
           </p>
         </StyleGuideSection>
 
@@ -135,8 +135,8 @@ export function StyleGuidePage() {
             <div>
               <p className="text-body-sm text-ink-muted">Body</p>
               <p className="max-w-prose">
-                At our digital marketing agency, we offer a range of services to help
-                businesses grow and succeed online.
+                At our digital marketing agency, we offer a range of services to help businesses
+                grow and succeed online.
               </p>
             </div>
           </div>
@@ -175,27 +175,21 @@ export function StyleGuidePage() {
                 SEO
               </Badge>
               <h4 className="text-heading-sm">Search engine optimization</h4>
-              <p className="mt-2 text-body-sm text-ink-muted">
-                White card — default variant.
-              </p>
+              <p className="mt-2 text-body-sm text-ink-muted">White card — default variant.</p>
             </Card>
             <Card variant="accent">
               <Badge variant="dark" className="mb-3">
                 PPC
               </Badge>
               <h4 className="text-heading-sm">Pay-per-click advertising</h4>
-              <p className="mt-2 text-body-sm text-ink-muted">
-                Celadon card — accent variant.
-              </p>
+              <p className="mt-2 text-body-sm text-ink-muted">Celadon card — accent variant.</p>
             </Card>
             <Card variant="dark">
               <Badge variant="accent" className="mb-3">
                 SMM
               </Badge>
               <h4 className="text-heading-sm text-on-dark">Social media marketing</h4>
-              <p className="mt-2 text-body-sm text-on-dark/80">
-                Dark card — dark variant.
-              </p>
+              <p className="mt-2 text-body-sm text-on-dark/80">Dark card — dark variant.</p>
             </Card>
           </div>
         </StyleGuideSection>
@@ -206,10 +200,7 @@ export function StyleGuidePage() {
           description="Contact section inputs: rounded corners, black border, accessible labels."
           learnFile="src/components/ui/Input/Input.tsx"
         >
-          <form
-            className="mx-auto max-w-md space-y-4"
-            onSubmit={(e) => e.preventDefault()}
-          >
+          <form className="mx-auto max-w-md space-y-4" onSubmit={(e) => e.preventDefault()}>
             <Input label="Name" name="name" placeholder="Jane Doe" />
             <Input
               label="Email"

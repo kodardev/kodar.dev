@@ -42,7 +42,7 @@
   --radius-card: 2.8125rem; /* 45px — large cards & sections */
 
   /* Spacing rhythm — blocks.cloud-style generous sections */
-  --spacing-section: 5rem;
+  --spacing-section: 5rem; /* 80px */
   --spacing-block: 2.5rem;
   --spacing-inline: 1.5rem;
 

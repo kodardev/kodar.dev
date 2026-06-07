@@ -10,8 +10,7 @@ const navLinks = [
   { to: "#services", label: "Calendario" },
 ] as const;
 
-const navLinkClass =
-  "text-heading-sm font-normal leading-7 text-ink hover:text-primary";
+const navLinkClass = "text-heading-sm font-normal leading-7 text-ink hover:text-primary";
 
 function DiscordIcon({ className }: { className?: string }) {
   return (
@@ -24,7 +23,7 @@ function DiscordIcon({ className }: { className?: string }) {
 export function SiteHeader() {
   return (
     <header className="bg-surface">
-      <Container className="flex items-center justify-between gap-6 py-[30px] xl:my-[60px] xl:py-0">
+      <Container className="flex items-center justify-between gap-6 py-7.5 xl:my-15 xl:py-0">
         <Link to="/" className="text-ink">
           <Logo />
         </Link>
